@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/colinnewell/json-format/json"
+	"github.com/colinnewell/dirty-json-format/json"
 )
 
 func main() {
