@@ -3,16 +3,19 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"io/ioutil"
 	"log"
+	"os"
 
 	"github.com/colinnewell/json-format/json"
 )
 
 func main() {
-	var b bytes.Buffer
-	err := json.Indent(&b, []byte(`{"blah":3`), "", "  ")
-	fmt.Println(b.String())
+	in, err := ioutil.ReadAll(os.Stdin)
 	if err != nil {
 		log.Fatal(err)
 	}
+	var b bytes.Buffer
+	json.Indent(&b, in, "", "  ")
+	fmt.Println(b.String())
 }
