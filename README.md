@@ -42,3 +42,6 @@ like this I'm not sure if there is a clear and obvious way people would be
 happy with the core library to be expanded.  I can understand why you don't
 export, every visible surface is something you have to continue supporting,
 but there's just so much just under the surface that would be so useful :)
+
+Anyway, this is a neat way to prototype the idea without actually messing
+with the core lib.
